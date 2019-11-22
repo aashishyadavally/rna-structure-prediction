@@ -28,13 +28,7 @@ def main():
 		type=int,
 		default=0,
 		dest='gap',
-		help='Number of bases between two nucleotide bases in sequence.')
-	parser.add_argument(
-		'--include_AU',
-		type=bool,
-		dest='iau',
-		help='If True, includes A-U base pair in DP-Table formulation. '\
-			 'If False, doesn\'t include A-U base pair in DP-Table formulation.',
+		help='Number of bases between two nucleotide bases in sequence.'
 	)
 
 	args = parser.parse_args()
