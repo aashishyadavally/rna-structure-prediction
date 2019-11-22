@@ -74,9 +74,8 @@ class PredictStructure:
         self.gap = gap
         initial_table = self.initialize_table()
         self.table = self.fill_table(initial_table)
-        self.output = ['.'] * len(self.n_bases)
+        self.output = ['.' for i in range(len(self.n_bases))]
         self.trace_non_crossings(0, len(self.n_bases)-1)
-        print(''.join(self.output), self.table[0][len(self.n_bases)-1])
         self.write_output(energy_argument)
 
 
