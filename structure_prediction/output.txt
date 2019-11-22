@@ -1,0 +1,4 @@
+> AUGUCAGCGUU
+{{{.}}{}.}.
+> max count of pairs
+4
