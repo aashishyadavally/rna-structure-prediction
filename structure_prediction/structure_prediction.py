@@ -206,8 +206,9 @@ class PredictStructure:
             return
         else:
             for k in range(i, j-self.gap):
-                if self.is_legal(tuple([self.n_bases[k], self.n_bases[j]])):
-                    if self.get_table_score(i, j) == self.get_table_score(i, k-1) + self.get_table_score(k+1, j-1) + 1:
+                pair = tuple([self.n_bases[k], self.n_bases[j]])
+                if self.is_legal(pair):
+                    if self.get_table_score(i, j) == self.get_table_score(i, k-1) + self.get_table_score(k+1, j-1) + self.legal_pairs[pair]:
                         self.output[k] = '{'
                         self.output[j] = '}'
                         self.trace_non_crossings(i, k-1)
